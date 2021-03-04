@@ -42,3 +42,173 @@ https://www.themezy.com/free-website-templates/10-movie-reviews-responsive-templ
 
 이걸 사용함.
 
+## 2021-03-04일 진행상황 및 알아간 점
+
+### `@RequestMapping` 과 `@GetMapping`의 차이점
+
+- 
+    ```java
+    @Target({ElementType.TYPE, ElementType.METHOD})
+    @Retention(RetentionPolicy.RUNTIME)
+    @Documented
+    @Mapping
+    public @interface RequestMapping {
+        /**
+        * The HTTP request methods to map to, narrowing the primary mapping:
+        * GET, POST, HEAD, OPTIONS, PUT, PATCH, DELETE, TRACE.
+        * <p><b>Supported at the type level as well as at the method level!</b>
+        * When used at the type level, all method-level mappings inherit this
+        * HTTP method restriction.
+        */
+        RequestMethod[] method() default {};
+    }
+    ```
+- 
+    ```java
+    @Target(ElementType.METHOD)
+    @Retention(RetentionPolicy.RUNTIME)
+    @Documented
+    @RequestMapping(method = RequestMethod.GET)
+    public @interface GetMapping {
+    }
+    ```
+- 위의 인터페이스들을 보면, `@RequestMapping`의 method를 default로 사용할 경우, GET, POST, HEAD, OPTIONS, PUT, PATCH, DELETE, TRACE를 같이 상속한다.
+- 반면 `@GetMapping`의 경우 @RequestMapping(method = RequestMethod.GET)을 가져오는것을 확인할 수 있다.
+
+### Spring에서 css, js 적용하는 방법
+
+https://www.themezy.com/free-website-templates/10-movie-reviews-responsive-template 여기서 가져온 template을 기준으로 설명.
+
+application.yml
+```yml
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+```
+
+아래와 같이 static에는 css, jss, dummy 등을 넣어주고 templates에는 html 파일들을 넣어준다.
+
+```
+.
+├── application.yml
+├── static
+│?? ├── __MACOSX
+│?? │?? ├── dummy
+│?? │?? ├── fonts
+│?? │?? ├── images
+│?? │?? ├── js
+│?? │?? │?? ├── ie-support
+│?? │?? │?? └── min
+│?? │?? └── sass
+│?? │??     ├── layout
+│?? │??     └── libs
+│?? │??         └── bootstrap-grid
+│?? ├── dummy
+│?? │?? ├── background.jpg
+│?? │?? ├── background@2x.jpg
+│?? │?? ├── figure.jpg
+│?? │?? ├── figure@2x.jpg
+│?? │?? ├── person-1.jpg
+│?? │?? ├── person-1@2x.jpg
+│?? │?? ├── person-2.jpg
+│?? │?? ├── person-2@2x.jpg
+│?? │?? ├── person-3.jpg
+│?? │?? ├── person-3@2x.jpg
+│?? │?? ├── person-4.jpg
+│?? │?? ├── person-4@2x.jpg
+│?? │?? ├── single-image.jpg
+│?? │?? ├── single-image@2x.jpg
+│?? │?? ├── slide-1.jpg
+│?? │?? ├── slide-1@2x.jpg
+│?? │?? ├── slide-2.jpg
+│?? │?? ├── slide-2@2x.jpg
+│?? │?? ├── slide-3.jpg
+│?? │?? ├── slide-3@2x.jpg
+│?? │?? ├── thumb-1.jpg
+│?? │?? ├── thumb-1@2x.jpg
+│?? │?? ├── thumb-2.jpg
+│?? │?? ├── thumb-2@2x.jpg
+│?? │?? ├── thumb-3.jpg
+│?? │?? ├── thumb-3@2x.jpg
+│?? │?? ├── thumb-4.jpg
+│?? │?? ├── thumb-4@2x.jpg
+│?? │?? ├── thumb-5.jpg
+│?? │?? ├── thumb-5@2x.jpg
+│?? │?? ├── thumb-6.jpg
+│?? │?? ├── thumb-6@2x.jpg
+│?? │?? ├── thumb-7.jpg
+│?? │?? ├── thumb-7@2x.jpg
+│?? │?? ├── thumb-8.jpg
+│?? │?? └── thumb-8@2x.jpg
+│?? ├── fonts
+│?? │?? ├── FontAwesome.otf
+│?? │?? ├── font-awesome.min.css
+│?? │?? ├── fontawesome-webfont.eot
+│?? │?? ├── fontawesome-webfont.svg
+│?? │?? ├── fontawesome-webfont.ttf
+│?? │?? └── fontawesome-webfont.woff
+│?? ├── images
+│?? │?? ├── arrow-gray.png
+│?? │?? ├── arrow-gray@2x.png
+│?? │?? ├── arrow.png
+│?? │?? ├── arrow@2x.png
+│?? │?? ├── icon-contact-envelope.png
+│?? │?? ├── icon-contact-envelope@2x.png
+│?? │?? ├── icon-contact-globe.png
+│?? │?? ├── icon-contact-globe@2x.png
+│?? │?? ├── icon-contact-map.png
+│?? │?? ├── icon-contact-map@2x.png
+│?? │?? ├── icon-contact-message.png
+│?? │?? ├── icon-contact-message@2x.png
+│?? │?? ├── icon-contact-pencil.png
+│?? │?? ├── icon-contact-pencil@2x.png
+│?? │?? ├── icon-contact-phone.png
+│?? │?? ├── icon-contact-phone@2x.png
+│?? │?? ├── icon-contact-user.png
+│?? │?? ├── icon-contact-user@2x.png
+│?? │?? ├── logo.png
+│?? │?? ├── logo@2x.png
+│?? │?? ├── select.png
+│?? │?? └── select@2x.png
+│?? ├── js
+│?? │?? ├── app.js
+│?? │?? ├── ie-support
+│?? │?? │?? ├── html5.js
+│?? │?? │?? ├── pie.htc
+│?? │?? │?? └── respond.js
+│?? │?? ├── jquery-1.11.1.min.js
+│?? │?? ├── jquery-1.11.1.min.map
+│?? │?? ├── min
+│?? │?? │?? ├── app-min.js
+│?? │?? │?? └── plugins-min.js
+│?? │?? └── plugins.js
+│?? ├── sass
+│?? │?? ├── layout
+│?? │?? │?? ├── _content.scss
+│?? │?? │?? ├── _footer.scss
+│?? │?? │?? └── _header.scss
+│?? │?? ├── libs
+│?? │?? │?? ├── _components.scss
+│?? │?? │?? ├── _global.scss
+│?? │?? │?? ├── _mixins.scss
+│?? │?? │?? ├── _normalize.scss
+│?? │?? │?? ├── _settings.scss
+│?? │?? │?? └── bootstrap-grid
+│?? │?? │??     ├── _grid.scss
+│?? │?? │??     ├── _mixins.scss
+│?? │?? │??     └── _settings.scss
+│?? │?? ├── pages
+│?? │?? └── style.scss
+│?? └── style.css
+└── templates
+    ├── about.html
+    ├── contact.html
+    ├── index.html
+    ├── joinus.html
+    ├── review.html
+    └── single.html
+
+```
+
+`HomeController`를 만들어서 메뉴바에서 page 이동을 구현함. 이를 위해서 html 코드들의 주소들을 Mapping받는 value들로 변경해줌.
