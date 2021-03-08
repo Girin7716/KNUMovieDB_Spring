@@ -44,6 +44,8 @@ https://www.themezy.com/free-website-templates/10-movie-reviews-responsive-templ
 
 ## 2021-03-04일 진행상황 및 알아간 점
 
+### 알아간 점
+
 ### `@RequestMapping` 과 `@GetMapping`의 차이점
 
 - 
@@ -93,114 +95,114 @@ spring:
 .
 ├── application.yml
 ├── static
-│?? ├── __MACOSX
-│?? │?? ├── dummy
-│?? │?? ├── fonts
-│?? │?? ├── images
-│?? │?? ├── js
-│?? │?? │?? ├── ie-support
-│?? │?? │?? └── min
-│?? │?? └── sass
-│?? │??     ├── layout
-│?? │??     └── libs
-│?? │??         └── bootstrap-grid
-│?? ├── dummy
-│?? │?? ├── background.jpg
-│?? │?? ├── background@2x.jpg
-│?? │?? ├── figure.jpg
-│?? │?? ├── figure@2x.jpg
-│?? │?? ├── person-1.jpg
-│?? │?? ├── person-1@2x.jpg
-│?? │?? ├── person-2.jpg
-│?? │?? ├── person-2@2x.jpg
-│?? │?? ├── person-3.jpg
-│?? │?? ├── person-3@2x.jpg
-│?? │?? ├── person-4.jpg
-│?? │?? ├── person-4@2x.jpg
-│?? │?? ├── single-image.jpg
-│?? │?? ├── single-image@2x.jpg
-│?? │?? ├── slide-1.jpg
-│?? │?? ├── slide-1@2x.jpg
-│?? │?? ├── slide-2.jpg
-│?? │?? ├── slide-2@2x.jpg
-│?? │?? ├── slide-3.jpg
-│?? │?? ├── slide-3@2x.jpg
-│?? │?? ├── thumb-1.jpg
-│?? │?? ├── thumb-1@2x.jpg
-│?? │?? ├── thumb-2.jpg
-│?? │?? ├── thumb-2@2x.jpg
-│?? │?? ├── thumb-3.jpg
-│?? │?? ├── thumb-3@2x.jpg
-│?? │?? ├── thumb-4.jpg
-│?? │?? ├── thumb-4@2x.jpg
-│?? │?? ├── thumb-5.jpg
-│?? │?? ├── thumb-5@2x.jpg
-│?? │?? ├── thumb-6.jpg
-│?? │?? ├── thumb-6@2x.jpg
-│?? │?? ├── thumb-7.jpg
-│?? │?? ├── thumb-7@2x.jpg
-│?? │?? ├── thumb-8.jpg
-│?? │?? └── thumb-8@2x.jpg
-│?? ├── fonts
-│?? │?? ├── FontAwesome.otf
-│?? │?? ├── font-awesome.min.css
-│?? │?? ├── fontawesome-webfont.eot
-│?? │?? ├── fontawesome-webfont.svg
-│?? │?? ├── fontawesome-webfont.ttf
-│?? │?? └── fontawesome-webfont.woff
-│?? ├── images
-│?? │?? ├── arrow-gray.png
-│?? │?? ├── arrow-gray@2x.png
-│?? │?? ├── arrow.png
-│?? │?? ├── arrow@2x.png
-│?? │?? ├── icon-contact-envelope.png
-│?? │?? ├── icon-contact-envelope@2x.png
-│?? │?? ├── icon-contact-globe.png
-│?? │?? ├── icon-contact-globe@2x.png
-│?? │?? ├── icon-contact-map.png
-│?? │?? ├── icon-contact-map@2x.png
-│?? │?? ├── icon-contact-message.png
-│?? │?? ├── icon-contact-message@2x.png
-│?? │?? ├── icon-contact-pencil.png
-│?? │?? ├── icon-contact-pencil@2x.png
-│?? │?? ├── icon-contact-phone.png
-│?? │?? ├── icon-contact-phone@2x.png
-│?? │?? ├── icon-contact-user.png
-│?? │?? ├── icon-contact-user@2x.png
-│?? │?? ├── logo.png
-│?? │?? ├── logo@2x.png
-│?? │?? ├── select.png
-│?? │?? └── select@2x.png
-│?? ├── js
-│?? │?? ├── app.js
-│?? │?? ├── ie-support
-│?? │?? │?? ├── html5.js
-│?? │?? │?? ├── pie.htc
-│?? │?? │?? └── respond.js
-│?? │?? ├── jquery-1.11.1.min.js
-│?? │?? ├── jquery-1.11.1.min.map
-│?? │?? ├── min
-│?? │?? │?? ├── app-min.js
-│?? │?? │?? └── plugins-min.js
-│?? │?? └── plugins.js
-│?? ├── sass
-│?? │?? ├── layout
-│?? │?? │?? ├── _content.scss
-│?? │?? │?? ├── _footer.scss
-│?? │?? │?? └── _header.scss
-│?? │?? ├── libs
-│?? │?? │?? ├── _components.scss
-│?? │?? │?? ├── _global.scss
-│?? │?? │?? ├── _mixins.scss
-│?? │?? │?? ├── _normalize.scss
-│?? │?? │?? ├── _settings.scss
-│?? │?? │?? └── bootstrap-grid
-│?? │?? │??     ├── _grid.scss
-│?? │?? │??     ├── _mixins.scss
-│?? │?? │??     └── _settings.scss
-│?? │?? ├── pages
-│?? │?? └── style.scss
-│?? └── style.css
+│   ├── __MACOSX
+│   │   ├── dummy
+│   │   ├── fonts
+│   │   ├── images
+│   │   ├── js
+│   │   │   ├── ie-support
+│   │   │   └── min
+│   │   └── sass
+│   │       ├── layout
+│   │       └── libs
+│   │           └── bootstrap-grid
+│   ├── dummy
+│   │   ├── background.jpg
+│   │   ├── background@2x.jpg
+│   │   ├── figure.jpg
+│   │   ├── figure@2x.jpg
+│   │   ├── person-1.jpg
+│   │   ├── person-1@2x.jpg
+│   │   ├── person-2.jpg
+│   │   ├── person-2@2x.jpg
+│   │   ├── person-3.jpg
+│   │   ├── person-3@2x.jpg
+│   │   ├── person-4.jpg
+│   │   ├── person-4@2x.jpg
+│   │   ├── single-image.jpg
+│   │   ├── single-image@2x.jpg
+│   │   ├── slide-1.jpg
+│   │   ├── slide-1@2x.jpg
+│   │   ├── slide-2.jpg
+│   │   ├── slide-2@2x.jpg
+│   │   ├── slide-3.jpg
+│   │   ├── slide-3@2x.jpg
+│   │   ├── thumb-1.jpg
+│   │   ├── thumb-1@2x.jpg
+│   │   ├── thumb-2.jpg
+│   │   ├── thumb-2@2x.jpg
+│   │   ├── thumb-3.jpg
+│   │   ├── thumb-3@2x.jpg
+│   │   ├── thumb-4.jpg
+│   │   ├── thumb-4@2x.jpg
+│   │   ├── thumb-5.jpg
+│   │   ├── thumb-5@2x.jpg
+│   │   ├── thumb-6.jpg
+│   │   ├── thumb-6@2x.jpg
+│   │   ├── thumb-7.jpg
+│   │   ├── thumb-7@2x.jpg
+│   │   ├── thumb-8.jpg
+│   │   └── thumb-8@2x.jpg
+│   ├── fonts
+│   │   ├── FontAwesome.otf
+│   │   ├── font-awesome.min.css
+│   │   ├── fontawesome-webfont.eot
+│   │   ├── fontawesome-webfont.svg
+│   │   ├── fontawesome-webfont.ttf
+│   │   └── fontawesome-webfont.woff
+│   ├── images
+│   │   ├── arrow-gray.png
+│   │   ├── arrow-gray@2x.png
+│   │   ├── arrow.png
+│   │   ├── arrow@2x.png
+│   │   ├── icon-contact-envelope.png
+│   │   ├── icon-contact-envelope@2x.png
+│   │   ├── icon-contact-globe.png
+│   │   ├── icon-contact-globe@2x.png
+│   │   ├── icon-contact-map.png
+│   │   ├── icon-contact-map@2x.png
+│   │   ├── icon-contact-message.png
+│   │   ├── icon-contact-message@2x.png
+│   │   ├── icon-contact-pencil.png
+│   │   ├── icon-contact-pencil@2x.png
+│   │   ├── icon-contact-phone.png
+│   │   ├── icon-contact-phone@2x.png
+│   │   ├── icon-contact-user.png
+│   │   ├── icon-contact-user@2x.png
+│   │   ├── logo.png
+│   │   ├── logo@2x.png
+│   │   ├── select.png
+│   │   └── select@2x.png
+│   ├── js
+│   │   ├── app.js
+│   │   ├── ie-support
+│   │   │   ├── html5.js
+│   │   │   ├── pie.htc
+│   │   │   └── respond.js
+│   │   ├── jquery-1.11.1.min.js
+│   │   ├── jquery-1.11.1.min.map
+│   │   ├── min
+│   │   │   ├── app-min.js
+│   │   │   └── plugins-min.js
+│   │   └── plugins.js
+│   ├── sass
+│   │   ├── layout
+│   │   │   ├── _content.scss
+│   │   │   ├── _footer.scss
+│   │   │   └── _header.scss
+│   │   ├── libs
+│   │   │   ├── _components.scss
+│   │   │   ├── _global.scss
+│   │   │   ├── _mixins.scss
+│   │   │   ├── _normalize.scss
+│   │   │   ├── _settings.scss
+│   │   │   └── bootstrap-grid
+│   │   │       ├── _grid.scss
+│   │   │       ├── _mixins.scss
+│   │   │       └── _settings.scss
+│   │   ├── pages
+│   │   └── style.scss
+│   └── style.css
 └── templates
     ├── about.html
     ├── contact.html
@@ -211,4 +213,25 @@ spring:
 
 ```
 
+### 진행상황
+
 `HomeController`를 만들어서 메뉴바에서 page 이동을 구현함. 이를 위해서 html 코드들의 주소들을 Mapping받는 value들로 변경해줌.
+
+
+## 2021-03-05일 진행상황 및 알아간 점
+
+### 알아간 점
+
+`@Column(name = ~~~)` 할 경우, 빨간줄이 뜨면 아래와 같이 설정하기.
+
+```
+Preferences > Editor > Inspections > JPA의 Unresolved database references in annotations 체크 해제 후 OK
+```
+
+
+
+
+### 진행상황
+
+https://happyer16.tistory.com/entry/Spring-JPA-%EB%8B%A4%EB%8C%80%EB%8B%A4-%EC%84%A4%EC%A0%95-%EB%B0%8F-%EC%A3%BC%EC%9D%98-Many-To-Many
+참고
